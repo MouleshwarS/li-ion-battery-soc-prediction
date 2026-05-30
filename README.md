@@ -1,10 +1,8 @@
 # Lithium-Ion Battery SoC Prediction Using Deep Learning
-
-&nbsp;&nbsp;&nbsp;&nbsp;Designed Vanilla RNN, LSTM and GRU models to predict the state of charge of a lithium-ion battery used in an EV.
+Designed Vanilla RNN, LSTM and GRU models to predict the state of charge of a lithium-ion battery used in an EV.
 
 ## Dataset Description
-
-&nbsp;&nbsp;&nbsp;&nbsp;The dataset contains data for driving trips that have been made using a BMW i3 EV. It has been originally sourced from IEEE Dataport, but published in Kaggle.
+The dataset contains data for driving trips that have been made using a BMW i3 EV. It has been originally sourced from IEEE Dataport, but published in Kaggle.
 * Title: BATTERY AND HEATING DATA IN REAL DRIVING CYCLES
 * URL: https://www.kaggle.com/datasets/atechnohazard/battery-and-heating-data-in-real-driving-cycles
 
@@ -47,8 +45,7 @@
 </table>
 
 ### Training and Test Datasets
-
-&nbsp;&nbsp;&nbsp;&nbsp;The training dataset has combined data from both categories, sorted in decreasing order of battery SoC.
+The training dataset has combined data from both categories, sorted in decreasing order of battery SoC.
 
 <table>
   <thead>
@@ -94,11 +91,10 @@
 
 <br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;On the other hand, the test dataset contains data for `12` unseen trips, `6` each from category A and B. To normalize the training, validation and test datasets, min-max normalization has been used, with a scaling range of `[-1, 1]`.
+On the other hand, the test dataset contains data for `12` unseen trips, `6` each from category A and B. To normalize the training, validation and test datasets, min-max normalization has been used, with a scaling range of `[-1, 1]`.
 
 ## Vanilla RNN
-
-&nbsp;&nbsp;&nbsp;&nbsp;The SimpleRNN and Dense layers of the Sequential module of the Keras library in Python were used to implement the Vanilla RNN.
+The SimpleRNN and Dense layers of the Sequential module of the Keras library in Python were used to implement the Vanilla RNN.
 * The activation functions used are as follows:
   * **Tanh or hyperbolic tangent** function for the **hidden layer(s)**
   * **Linear function** for the **output layer**
@@ -106,19 +102,16 @@
 * Along with MSE, **R-squared (R2)** score was used as a performance metric
 * **Stochastic gradient descent (SGD)** with **`0.025`** as the learning rate, was used as the optimizer
 
-&nbsp;&nbsp;&nbsp;&nbsp;The optimal configuration for the Vanilla RNN model was determined using a trial and error approach, in which different configurations were trained for `100` epochs with `512` samples per batch, and their performance metrics were analysed. The configuration with the least possible MSE as well as highest possible R2 score was chosen as the optimal one.
+The optimal configuration for the Vanilla RNN model was determined using a trial and error approach, in which different configurations were trained for `100` epochs with `512` samples per batch, and their performance metrics were analysed. The configuration with the least possible MSE as well as highest possible R2 score was chosen as the optimal one.
 
 ## LSTM
-
-&nbsp;&nbsp;&nbsp;&nbsp;The LSTM and Dense layers of the Sequential module of the Keras library in Python were used to implement the long short-term memory network. The activation functions, loss function, optimizer, learning rate and the performance metrics used are similar to the Vanilla RNN implementation, with the optimal configuration for the LSTM model also being determined in a similar fashion.
+The LSTM and Dense layers of the Sequential module of the Keras library in Python were used to implement the long short-term memory network. The activation functions, loss function, optimizer, learning rate and the performance metrics used are similar to the Vanilla RNN implementation, with the optimal configuration for the LSTM model also being determined in a similar fashion.
 
 ## GRU
-
-&nbsp;&nbsp;&nbsp;&nbsp;The GRU and Dense layers of the Sequential module of the Keras library in Python were used to implement the gated recurrent unit network. The activation functions, loss function, optimizer, learning rate and the performance metrics used are similar to the Vanilla RNN implementation, with the optimal configuration for the GRU model also being determined in a similar fashion.
+The GRU and Dense layers of the Sequential module of the Keras library in Python were used to implement the gated recurrent unit network. The activation functions, loss function, optimizer, learning rate and the performance metrics used are similar to the Vanilla RNN implementation, with the optimal configuration for the GRU model also being determined in a similar fashion.
 
 ## Model Testing/Validation
-
-&nbsp;&nbsp;&nbsp;&nbsp;The performance of the three optimal models was compared using the test datasets, as well as the remaining datasets that were not used for either training, validation or testing.
+The performance of the three optimal models was compared using the test datasets, as well as the remaining datasets that were not used for either training, validation or testing.
 
 * Results for the Test Datasets
 <table>
@@ -185,8 +178,7 @@
 </table>
 
 ## Supplementary Results
-
-&nbsp;&nbsp;&nbsp;&nbsp;In addition to the above RNN models, SoC prediction was carried out using some popular ML algorithms.
+In addition to the above RNN models, SoC prediction was carried out using some popular ML algorithms.
 
 <table>
   <thead>
@@ -281,8 +273,7 @@
 
 <br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;For the KNN Regressor, the best value of K was found by plotting the elbow curve for R2 scores versus different values of K.
+For the KNN Regressor, the best value of K was found by plotting the elbow curve for R2 scores versus different values of K.
 
 ## Conclusion
-
-&nbsp;&nbsp;&nbsp;&nbsp;The GRU model achieved the lowest MSE and highest R2 score of all the models tested and hence, it proved to be quite capable of accurately estimating the SoC of a battery operating under different conditions.
+The GRU model achieved the lowest MSE and highest R2 score of all the models tested and hence, it proved to be quite capable of accurately estimating the SoC of a battery operating under different conditions.

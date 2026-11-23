@@ -17,8 +17,7 @@ li-ion-battery-soc-prediction/
 │   └── RNN_SoC_Nodes_Final.ipynb       # Optimal No. of HL Nodes for RNN
 ├── EDA_CategoryA.ipynb                 # EDA for Category A Trips
 ├── EDA_CategoryB.ipynb                 # EDA for Category B Trips
-├── README.md                           # Project Description
-└── SoC_Prediction_ML.ipynb             # SoC Prediction Using ML Algorithms
+└── README.md                           # Project Description
 ```
 
 </details>
@@ -198,104 +197,6 @@ The performance of the three optimal models was compared using the test datasets
     </tr>
   </tbody>
 </table>
-
-## Supplementary Results
-In addition to the above RNN models, SoC prediction was carried out using some popular ML algorithms.
-
-<table>
-  <thead>
-    <tr>
-      <th align="center">Algorithm</th>
-      <th align="center">Training R2 Score <br> (in %)</th>
-      <th align="center">Validation R2 Score <br> (in %)</th>
-      <th align="center">Test R2 Score <br> (in %)</th>
-      <th align="center">Miscellaneous Test R2 Score <br> (in %)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="center">Linear Regression</td>
-      <td align="center"><code>82.9611</code></td>
-      <td align="center"><code>82.8506</code></td>
-      <td align="center"><code>93.5213</code></td>
-      <td align="center"><code>81.5465</code></td>
-    </tr>
-    <tr>
-      <td align="center">Lasso Regression</td>
-      <td align="center"><code>82.9510</code></td>
-      <td align="center"><code>82.8430</code></td>
-      <td align="center"><code>93.3572</code></td>
-      <td align="center"><code>81.3621</code></td>
-    </tr>
-    <tr>
-      <td align="center">Ridge Regression</td>
-      <td align="center"><code>82.9575</code></td>
-      <td align="center"><code>82.8485</code></td>
-      <td align="center"><code>93.4173</code></td>
-      <td align="center"><code>81.4368</code></td>
-    </tr>
-    <tr>
-      <td align="center">Linear SVR</td>
-      <td align="center"><code>81.9056</code></td>
-      <td align="center"><code>81.8045</code></td>
-      <td align="center"><code>94.5503</code></td>
-      <td align="center"><code>81.9790</code></td>
-    </tr>
-    <tr>
-      <td align="center">Decision Tree Regressor</td>
-      <td align="center"><code>99.9899</code></td>
-      <td align="center"><code>96.5195</code></td>
-      <td align="center"><code>85.4748</code></td>
-      <td align="center"><code>71.3823</code></td>
-    </tr>
-    <tr>
-      <td align="center">AdaBoost Regressor</td>
-      <td align="center"><code>74.1895</code></td>
-      <td align="center"><code>74.2081</code></td>
-      <td align="center"><code>77.1237</code></td>
-      <td align="center"><code>62.9671</code></td>
-    </tr>
-    <tr>
-      <td align="center">MLP Regressor</td>
-      <td align="center"><code>92.8503</code></td>
-      <td align="center"><code>92.8617</code></td>
-      <td align="center"><code>94.7645</code></td>
-      <td align="center"><code>81.1827</code></td>
-    </tr>
-    <tr>
-      <td align="center">KNN Regressor</td>
-      <td align="center"><code>98.7171</code></td>
-      <td align="center"><code>98.0798</code></td>
-      <td align="center"><code>84.5740</code></td>
-      <td align="center"><code>72.0371</code></td>
-    </tr>
-    <tr>
-      <td align="center">XGBoost Regressor</td>
-      <td align="center"><code>96.8006</code></td>
-      <td align="center"><code>96.7200</code></td>
-      <td align="center"><code>90.1492</code></td>
-      <td align="center"><code>77.4607</code></td>
-    </tr>
-    <tr>
-      <td align="center">Random Forest Regressor</td>
-      <td align="center"><code>99.7114</code></td>
-      <td align="center"><code>97.9454</code></td>
-      <td align="center"><code>89.2077</code></td>
-      <td align="center"><code>75.8618</code></td>
-    </tr>
-    <tr>
-      <td align="center">Gradient Boosting Regressor</td>
-      <td align="center"><code>93.5534</code></td>
-      <td align="center"><code>93.4392</code></td>
-      <td align="center"><code>93.2566</code></td>
-      <td align="center"><code>79.7241</code></td>
-    </tr>
-  </tbody>
-</table>
-
-<br>
-
-For the KNN Regressor, the best value of K was found by plotting the elbow curve for R2 scores versus different values of K.
 
 ## Conclusion
 The GRU model achieved the lowest MSE and highest R2 score of all the models tested and hence, it proved to be quite capable of accurately estimating the SoC of a battery operating under different conditions.

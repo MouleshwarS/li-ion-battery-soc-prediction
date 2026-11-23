@@ -1,6 +1,28 @@
 # Lithium-Ion Battery SoC Prediction Using Deep Learning
 Designed Vanilla RNN, LSTM and GRU models to predict the state of charge of a lithium-ion battery used in an EV.
 
+<details>
+<summary><b>Click to expand the repository structure</b></summary>
+
+<br>
+
+```text
+li-ion-battery-soc-prediction/
+├── train_test/
+│   ├── GRU_SoC_Layers_Final.ipynb      # Optimal No. of Hidden Layer(s) for GRU
+│   ├── GRU_SoC_Nodes_Final.ipynb       # Optimal No. of HL Nodes for GRU
+│   ├── LSTM_SoC_Layers_Final.ipynb     # Optimal No. of Hidden Layer(s) for LSTM
+│   ├── LSTM_SoC_Nodes_Final.ipynb      # Optimal No. of HL Nodes for LSTM
+│   ├── RNN_SoC_Layers_Final.ipynb      # Optimal No. of Hidden Layer(s) for RNN
+│   └── RNN_SoC_Nodes_Final.ipynb       # Optimal No. of HL Nodes for RNN
+├── EDA_CategoryA.ipynb                 # EDA for Category A Trips
+├── EDA_CategoryB.ipynb                 # EDA for Category B Trips
+├── README.md                           # Project Description
+└── SoC_Prediction_ML.ipynb             # SoC Prediction Using ML Algorithms
+```
+
+</details>
+
 ## Dataset Description
 The dataset contains data for driving trips that have been made using a BMW i3 EV. It has been originally sourced from IEEE Dataport, but published in Kaggle.
 * Title: BATTERY AND HEATING DATA IN REAL DRIVING CYCLES
